@@ -53,6 +53,10 @@ In this type of method we follow some rules in simplifying the given
 input medical text. Flow diagram in Fig. \[fig:flow-diagram\] shows the
 working of rule based methods, using medical entity recognizers, synonym
 generators and ranking synonyms.
+<figure>
+  <img src="flow-diagram.jpg" alt="abc" title="Optional title" />
+  <figcaption>Optional title</figcaption>
+</figure>
 
 ![](flow-diagram.jpg)*Flow diagram for rule based
 methods*
