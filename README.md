@@ -54,12 +54,11 @@ input medical text. Flow diagram in Fig. \[fig:flow-diagram\] shows the
 working of rule based methods, using medical entity recognizers, synonym
 generators and ranking synonyms.
 <figure>
-  <img src="flow-diagram.jpg" alt="abc" title="Optional title" />
-  <figcaption>Optional title</figcaption>
+  <img src="flow-diagram.jpg" alt="" />
+  <figcaption align = "center">Optional title</figcaption>
 </figure>
 
-![](flow-diagram.jpg)*Flow diagram for rule based
-methods*
+
 
 #### Medical entity recognizers:
 
@@ -234,10 +233,13 @@ modelling translation tasks. We compared three different models for the
 task. The models used by Neural Text Simplification model by Sergiu
 et.al, Seq-Seq model with Input feeding attention and a simple seq-seq
 model with global attention.
-
-![Model of the neural simplification model with global attention and
+<figure align="center">
+  <img src="Architecture-of-the-neural-simplification-model-with-global-attention-and-input-feeding.png" alt="" />
+  <figcaption>Model of the neural simplification model with global attention and
 input
-feeding[]{data-label="fig:globalatt"}](Architecture-of-the-neural-simplification-model-with-global-attention-and-input-feeding.png)
+feeding</figcaption>
+</figure>
+
 
 #### Neural Text Simplification model by Sergiu et al.:
 
@@ -273,9 +275,12 @@ scratch on 80,000 medical sentences and test it on medical sentences for
 simplification.
 
 #### Global Attention model without input feeding
+<figure align="center">
+  <img src="withoutinputfeeding.png" alt="" />
+  <figcaption>Model of the neural simplification model with only global
+attention</figcaption>
+</figure>
 
-![Model of the neural simplification model with only global
-attention[]{data-label="fig:withoutfeeding"}](withoutinputfeeding.png)
 
 To compare the performance of the the model proposed by Sergiu et al.
 and the model trained only on medical sentences saperated using Ctakes
@@ -395,16 +400,44 @@ the chances of google blocking the requests from the college are every
 high in context to the events that happend with arxiv.org in the past
 few months due to the high number of request that would be sent for
 ranking the synonyms.
+<figure align="center">
+  <img src="blue_score.png" alt="" />
+  <figcaption>BLEU score</figcaption>
+</figure>
 
-![BLEU score[]{data-label="fig:bleu_score"}](blue_score.png)
 
-![Flesch kincaid score
-(Readability)[]{data-label="fig:kincaid_score"}](kincaid_score.png)
+<figure align="center">
+  <img src="kincaid_score.png" alt="" />
+  <figcaption>Flesch kincaid score
+(Readability)</figcaption>
+</figure>
 
-![ROUGE\_L(f1-score)[]{data-label="fig:rouge_l_f"}](rouge_f_score.png)
 
-![ROUGE\_L(precision)[]{data-label="fig:rouge_l_p"}](rouge_p_score.png)
+<figure align="center">
+  <img src="rouge_f_score.png" alt="" />
+  <figcaption>ROUGE\_L(f1-score)</figcaption>
+</figure>
 
-![ROUGE\_L(recall)[]{data-label="fig:rouge_l_r"}](rouge_r_score.png)
+
+<figure align="center">
+  <img src="rouge_p_score.png" alt="" />
+  <figcaption>ROUGE\_L(precision)</figcaption>
+</figure>
+
+
+<figure align="center">
+  <img src="rouge_r_score.png" alt="" />
+  <figcaption>ROUGE\_L(recall</figcaption>
+</figure>
+
+
+<figure align="center">
+  <img src="skipthoughtsim_score.png" alt="" />
+  <figcaption> Euclidean distance on vectors from skipthoughtsim</figcaption>
+</figure>
+<figure align="center">
+  <img src="performances.png" alt="" />
+  <figcaption></figcaption>
+</figure>
 
 
