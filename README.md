@@ -1,3 +1,4 @@
+
 ---
 abstract: "
     Medical texts can be difficult to understand for laymen, due to a
@@ -14,7 +15,6 @@ title: "Medical Text Simplification"
 ---
 
 Introduction
-============
 
 Our health, and the health of our family and friends, is something that
 concerns us all. To be able to understand texts from the medical domain,
@@ -41,7 +41,6 @@ and can use a variety of methods and procedures that used for machine
 translation to solve the task.
 
 Methods
-=======
 
 The process of medical text simplification is broadly divided into two
 types namely rule based methods, neural sequence-sequence methods. In
@@ -283,8 +282,6 @@ vector is concatenated with the input of the decoder at the next time
 step.
 
 Evaluation Metrics:
-===================
-
 1.  **BLEU score:**\
     BLEU (bilingual evaluation understudy) is an algorithm for
     evaluating the quality of text which has been machine-translated
@@ -372,7 +369,6 @@ Evaluation Metrics:
     to classify a sentence from a word to vec representation.
 
 Observations and Results:
-=========================
 
 #### NOTE:
 
@@ -438,3 +434,6 @@ ranking the synonyms.
 [^1]: Use footnote for providing further information about author
     (webpage, alternative address)—*not* for acknowledging funding
     agencies. Funding acknowledgements go at the end of the paper.
+# geek957.github.io
+# Medical Text Simplication
+
