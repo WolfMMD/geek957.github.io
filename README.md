@@ -429,11 +429,12 @@ ranking the synonyms.
   <img src="rouge_r_score.png" alt="" />
   <figcaption>ROUGE\_L(recall)</figcaption>
 </figure>
-<div>
+
 <figure align="center">
   <img src="skipthoughtsim_score.png" alt="" />
   <figcaption> Euclidean distance on vectors from skipthoughtsim</figcaption>
-</figure></div>
+</figure>
+
 <figure align="center">
   <img src="performances.png" alt="" />
   <figcaption></figcaption>
