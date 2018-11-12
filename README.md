@@ -1,7 +1,7 @@
 
-#Medical Text Simplification
+# Medical Text Simplification
 
-##Abstract
+## Abstract
 Medical texts can be difficult to understand for laymen, due to a
 frequent occurrence of specialised medical terms. Replacing these
 difficult terms with easier synonyms can, however, lead to improved
@@ -13,7 +13,7 @@ methods. All the experiments were done on normal wikipedia and simple
 wikipedia dataset. 
 
 
-##Introduction
+## Introduction
 
 Our health, and the health of our family and friends, is something that
 concerns us all. To be able to understand texts from the medical domain,
@@ -39,7 +39,7 @@ that we can model the simplification task as a machine translation task
 and can use a variety of methods and procedures that used for machine
 translation to solve the task.
 
-##Methods
+## Methods
 
 The process of medical text simplification is broadly divided into two
 types namely rule based methods, neural sequence-sequence methods. In
@@ -47,7 +47,7 @@ rule based method difficult medical terms are replaced with its easy
 synonym. In Neural sequence to sequence methods, we train various types
 of sequence to sequence models and predict by giving an input sentence.
 
-###Rule based methods:
+### Rule based methods:
 
 In this type of method we follow some rules in simplifying the given
 input medical text. Flow diagram in Fig. \[fig:flow-diagram\] shows the
@@ -57,7 +57,7 @@ generators and ranking synonyms.
 ![Flow diagram for rule based
 methods[]{data-label="fig:flow-diagram"}](flow-diagram.png)
 
-### Medical entity recognizers:
+#### Medical entity recognizers:
 
 1.  **Metamap:**\
     MetaMap is a highly configurable program to map biomedical text to
@@ -138,7 +138,7 @@ methods[]{data-label="fig:flow-diagram"}](flow-diagram.png)
     “treatment”, “test”. Similar to metamap, it also detects the longest
     medical phrase.
 
-### Synonyms finder:
+#### Synonyms finder:
 
 1.  **UMLS:**\
     The Unified Medical Language System (UMLS) is a collection of many
@@ -173,7 +173,7 @@ methods[]{data-label="fig:flow-diagram"}](flow-diagram.png)
     source of synoyms as it specified to be a subse of the larger
     Thesaurus of UMLS.
 
-### Ranking of synonyms for replacement selection:
+#### Ranking of synonyms for replacement selection:
 
 1.  **Frequency based methods:**\
     Frequency of occurance of a word can considered to signify the
@@ -213,7 +213,7 @@ methods[]{data-label="fig:flow-diagram"}](flow-diagram.png)
     We use a python library compund word splitter to get the number of
     subword in a word to rank the synonyms.
 
-##Neural sequence-sequence models:
+### Neural sequence-sequence models:
 
 Neural seq to seq models have been successfully used to model and solve
 various basic problems in natural language processing like speech
@@ -235,7 +235,7 @@ model with global attention.
 input
 feeding[]{data-label="fig:globalatt"}](Architecture-of-the-neural-simplification-model-with-global-attention-and-input-feeding.png)
 
-### Neural Text Simplification model by Sergiu et al.:
+#### Neural Text Simplification model by Sergiu et al.:
 
 We use a seq to seq encoder decoder model with global input feed
 attention to model the simplification task. We use the OpenNMT framework
@@ -264,7 +264,7 @@ obtained by segregation using Ctakes. We also train the model from
 scratch on 80,000 medical sentences and test it on medical sentences for
 simplification.
 
-### Global Attention model without input feeding
+#### Global Attention model without input feeding
 
 ![Model of the neural simplification model with only global
 attention[]{data-label="fig:withoutfeeding"}](withoutinputfeeding.png)
@@ -278,7 +278,7 @@ the feedback mechanism where it lacks the feedback where $\Tilde{h_{t}}$
 vector is concatenated with the input of the decoder at the next time
 step.
 
-#Evaluation Metrics:
+## Evaluation Metrics:
 1.  **BLEU score:**\
     BLEU (bilingual evaluation understudy) is an algorithm for
     evaluating the quality of text which has been machine-translated
@@ -365,7 +365,7 @@ step.
     of a sentence doesnot change when it is simplified it is difficult
     to classify a sentence from a word to vec representation.
 
-#Observations and Results:
+## Observations and Results:
 
 #### NOTE:
 
