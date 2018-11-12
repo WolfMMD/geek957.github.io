@@ -54,8 +54,8 @@ input medical text. Flow diagram in Fig. \[fig:flow-diagram\] shows the
 working of rule based methods, using medical entity recognizers, synonym
 generators and ranking synonyms.
 
-![Flow diagram for rule based
-methods[]{data-label="fig:flow-diagram"}](flow-diagram.png)
+![](flow-diagram.jpg)*Flow diagram for rule based
+methods*
 
 #### Medical entity recognizers:
 
