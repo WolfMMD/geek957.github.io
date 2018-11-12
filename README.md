@@ -55,7 +55,7 @@ working of rule based methods, using medical entity recognizers, synonym
 generators and ranking synonyms.
 <figure>
   <img src="flow-diagram.jpg" alt="" />
-  <figcaption align = "center">Optional title</figcaption>
+  <figcaption align = "center">Flow diagram for rule based methods</figcaption>
 </figure>
 
 
