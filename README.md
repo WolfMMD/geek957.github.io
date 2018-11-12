@@ -1,20 +1,19 @@
 
----
-abstract: "
-    Medical texts can be difficult to understand for laymen, due to a
-    frequent occurrence of specialised medical terms. Replacing these
-    difficult terms with easier synonyms can, however, lead to improved
-    readability. In this report, we made a case study over two types of
-    approaches namely rule based methods, neural sequence to sequence
-    methods. The performance is evaluated by various metrics and observed
-    that neural sequence to sequence methods are better than rule based
-    methods. All the experiments were done on normal wikipedia and simple
-    wikipedia dataset. "
+#Medical Text Simplification
 
-title: "Medical Text Simplification"
----
+##Abstract
+Medical texts can be difficult to understand for laymen, due to a
+frequent occurrence of specialised medical terms. Replacing these
+difficult terms with easier synonyms can, however, lead to improved
+readability. In this report, we made a case study over two types of
+approaches namely rule based methods, neural sequence to sequence
+methods. The performance is evaluated by various metrics and observed
+that neural sequence to sequence methods are better than rule based
+methods. All the experiments were done on normal wikipedia and simple
+wikipedia dataset. 
 
-Introduction
+
+##Introduction
 
 Our health, and the health of our family and friends, is something that
 concerns us all. To be able to understand texts from the medical domain,
@@ -40,7 +39,7 @@ that we can model the simplification task as a machine translation task
 and can use a variety of methods and procedures that used for machine
 translation to solve the task.
 
-Methods
+##Methods
 
 The process of medical text simplification is broadly divided into two
 types namely rule based methods, neural sequence-sequence methods. In
@@ -48,8 +47,7 @@ rule based method difficult medical terms are replaced with its easy
 synonym. In Neural sequence to sequence methods, we train various types
 of sequence to sequence models and predict by giving an input sentence.
 
-Rule based methods:
--------------------
+###Rule based methods:
 
 In this type of method we follow some rules in simplifying the given
 input medical text. Flow diagram in Fig. \[fig:flow-diagram\] shows the
@@ -215,8 +213,7 @@ methods[]{data-label="fig:flow-diagram"}](flow-diagram.png)
     We use a python library compund word splitter to get the number of
     subword in a word to rank the synonyms.
 
-Neural sequence-sequence models:
---------------------------------
+##Neural sequence-sequence models:
 
 Neural seq to seq models have been successfully used to model and solve
 various basic problems in natural language processing like speech
@@ -281,7 +278,7 @@ the feedback mechanism where it lacks the feedback where $\Tilde{h_{t}}$
 vector is concatenated with the input of the decoder at the next time
 step.
 
-Evaluation Metrics:
+#Evaluation Metrics:
 1.  **BLEU score:**\
     BLEU (bilingual evaluation understudy) is an algorithm for
     evaluating the quality of text which has been machine-translated
@@ -368,7 +365,7 @@ Evaluation Metrics:
     of a sentence doesnot change when it is simplified it is difficult
     to classify a sentence from a word to vec representation.
 
-Observations and Results:
+#Observations and Results:
 
 #### NOTE:
 
@@ -402,38 +399,4 @@ ranking the synonyms.
 
 ![ROUGE\_L(recall)[]{data-label="fig:rouge_l_r"}](rouge_r_score.png)
 
-[width=1]{}
-
-                           BLEU score     Rouge\_L(P)    Rouge\_L(R)    Rougl\_L(F)     kincaid(precict)   skipthought
-  --------- -------------- -------------- -------------- -------------- --------------- ------------------ --------------
-  Metamap                                                                                                  
-  wordnet   ngrams         0.4432118904   0.6774523321   0.6974879221   0.6508470698    18.7606382979      0.8433149431
-            splitter       0.4129727651   0.5990332398   0.6958574005   0.6068929355    20.920212766       0.886097689
-  UMLS      ngrams         0.441827652    0.6720106041   0.6942048992   0.6459766575    18.9468085106      0.8524799492
-            splitter       0.3836522925   0.5580875567   0.7134037187   0.5806682089    23.25              0.9290062694
-  all       ngrams         0.4341307396   0.6673577631   0.6868832762   0.6407838217    18.8563829787      0.8636967017
-            splitter       0.3809698827   0.5567599099   0.7111263471   0.5789648857    23.1117021277      0.9322890547
-  Cliner                                                                                                   
-  wordnet   ngrams         0.5505308389   0.7262284754   0.7816882702   0.7160651977    18.6869565217      0.7032040527
-            splitter       0.5445769842   0.7145905943   0.7800361466   0.7086593183    18.9217391304      0.7173737382
-  UMLS      ngrams         0.4849797065   0.6746994112   0.7124768671   0.6552006594    17.9043478261      0.8350989225
-            splitter       0.496771784    0.6701076315   0.7601244693   0.6705361583    19.5217391304      0.7840997863
-  all       ngrams         0.4771438491   0.6707520886   0.7078979485   0.6510481825    17.7652173913      0.855248559
-            splitter       0.4935356662   0.6677613192   0.757206128    0.6681629679    19.5130434783      0.8024305003
-  Ctakes                                                                                                   
-  wordnet   ngrams         0.4816855814   0.7073311119   0.7109971088   0.6772453016    18.6071428571      0.8784923683
-            splitter       0.4511046183   0.6321794094   0.716951335    0.6379578968    20.2023809524      0.9030209313
-  UMLS      ngrams         0.4874979774   0.711893916    0.7172900713   0.6825887507    18.630952381       0.8662211576
-            splitter       0.4254247302   0.5932595618   0.7296881068   0.6132783218    22.3333333333      0.9192623634
-  all       ngrams         0.4739580408   0.7030687161   0.706937693    0.6733794386    18.6547619048      0.8884247364
-            splitter       0.4217653215   0.5917836318   0.7262881786   0.6112200462    22.0476190476      0.9233955776
-            0.4400383779   0.7423205441   0.6377347485   0.626050514    16.3875350926   0.8395095084       
-            0.5653325021   0.7729765693   0.7411002805   0.72462505     17.288826502    0.6684498121       
-            0.7033068599   0.9158948488   0.8451720688   0.8526115636   17.3947220663   0.6154621379       
-
-[^1]: Use footnote for providing further information about author
-    (webpage, alternative address)—*not* for acknowledging funding
-    agencies. Funding acknowledgements go at the end of the paper.
-# geek957.github.io
-# Medical Text Simplication
 
