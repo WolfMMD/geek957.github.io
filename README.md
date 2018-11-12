@@ -251,10 +251,14 @@ using the information provided from the hidden states of the source
 sentence and by computing a weighted average with the alignment weights
 ${a_t} $. The new hidden state is obtained using a concatenation of the
 previous hidden state and the context vector:
-$$\Tilde{h_{t}} = tanhW(c_t;h_t)$$ The global alignment weights at are
+![](equation1.png)
+
+
+The global alignment weights at are
 being computed with a softmax function over the general scoring method
 for attention:
-$$a_t(s) = \frac{exp(h_{t}^{T}W_{as}h_s)}{\Sigma_{s'}exp(h_{t}^{T}W_{as'}h_{s'})}$$
+![](equation2.png)
+
 Input feeding is a process that sends the previous hidden state obtained
 using the alignment method, to the input at the next step.
 
